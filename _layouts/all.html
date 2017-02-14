@@ -1,0 +1,27 @@
+{% include head.html %}
+{% include header.html %}
+
+{% for post in site.posts %}
+  {% assign individualPost = false %}
+  {% include post-contents.html %}
+{% endfor %}
+
+<!-- PAGINATION -->
+<nav class="clear pagination" aria-label="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination__older" href="{{ paginator.next_page_path }}">
+      <span class="sr-only">Older posts</span>
+    </a>
+  {% else %}
+    <span class="pagination__older"></span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a class="pagination__newer" href="{{ paginator.previous_page_path }}">
+      <span class="sr-only">Newer posts</span>
+    </a>
+  {% else %}
+    <span class="pagination__newer"></span>
+  {% endif %}
+</nav>
+
+{% include footer.html %}

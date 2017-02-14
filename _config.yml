@@ -1,0 +1,20 @@
+# Gems
+gems:
+  - jekyll-paginate
+
+# Site settings
+title: Highlights from books and articles | Melanie Richards
+email: hello@melanie-richards.com
+url: "http://highlights.melanie-richards.com"
+images: /assets/images/content
+
+# Blog settings
+paginate: 16
+paginate_path: "/all/page:num/"
+permalink: /hightlights/:title/
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: assets/_sass
+  style: compressed

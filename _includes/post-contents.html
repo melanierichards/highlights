@@ -1,0 +1,17 @@
+<article class="post">
+  {% assign current_source = page.source %}
+  {% if individualPost %}
+    <h1>Highlights from {{ post.title }} by {{ post.author }}</h1>
+  {% else %}
+    <h2>{{ post.title }} by {{ post.author }}</h2>
+  {% endif %}
+
+  <ul>
+    {% for highlight in site.data[current_source] %}
+      <li>
+        <p>{{ highlight.text }}</p>
+        <span>{{ highlight.page }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</article>
