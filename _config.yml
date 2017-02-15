@@ -9,7 +9,7 @@ url: "http://highlights.melanie-richards.com"
 images: /assets/images/content
 
 # Blog settings
-paginate: 16
+paginate: 10
 paginate_path: "/all/page:num/"
 permalink: /highlights/:title/
 
