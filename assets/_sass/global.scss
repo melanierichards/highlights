@@ -1,0 +1,94 @@
+/*
+ *	BASICS
+ *	---------------------------------------------
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2em;
+  font: 400 100%/1.4 $font-body;
+  color: $color-body;
+  background: $color-bg;
+}
+
+:focus {
+  outline: 1px dashed #000;
+}
+
+::selection {
+	background: #fff;
+	color: #000;
+}
+
+::-moz-selection {
+	background: #fff;
+	color: #000;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: $bp-xs) {
+  body {
+    padding: 1.25em;
+  }
+}
+
+/*
+ *	TYPOGRAPHY
+ *	---------------------------------------------
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: 1em;
+}
+
+ul {
+  list-style: none;
+}
+
+@media (min-width: $bp-m) {
+  body {
+    font-size: 1.125em;
+  }
+}
+
+/*
+ *	UTILITIES
+ *	---------------------------------------------
+ */
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute !important;
+}
+
+.clear:after, .clear::after,
+.row:after, .row::after {
+  content: "";
+  display: table;
+  clear: both;
+  width: 100%;
+}
+
+/*
+ *	MEDIA
+ *	---------------------------------------------
+ */
+
+img {
+  display: block;
+  margin-bottom: 1em;
+  max-width: 100%;
+}

@@ -1,0 +1,111 @@
+/*
+ *	sourceECTION (A BOOK OR GROUP OF ARTICLES)
+ *	---------------------------------------------
+ */
+
+.source {
+  margin-bottom: 3em;
+}
+
+.source + .source {
+  border-top: 3px double $color-border;
+  padding-top: $margin-m;
+}
+
+.source__info {
+  margin: 0 auto $margin-l;
+  width: 12.5em;
+  text-align: center;
+}
+
+.source__title {
+  margin-bottom: $margin-s;
+  font: 1.166em/1.2 $font-secondary;
+}
+
+.source__title-small,
+.special-edition,
+.highlight__location  {
+  color: $color-secondary;
+  font: .75em/1.2 $font-body;
+  @include all-caps();
+}
+
+.source__title-small {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.source__image {
+  margin: 0 auto $margin-xs;
+}
+
+.highlights {
+  padding-top: 1.25em;
+  border-top: 1px solid $color-border;
+  max-width: 40em;
+}
+
+.highlight {
+  margin-bottom: $margin-m;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $bp-s) {
+  .page-wrap {
+    text-align: center;
+  }
+
+  .source {
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .source + .source {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .source__info {
+    float: left;
+    top: 2em;
+    position: -webkit-sticky;
+    position: sticky;
+    margin-right: 3em;
+    width: 200px;
+  }
+
+  .highlights {
+    padding-top: 0;
+    border-top: 0;
+    width: auto;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  .source__title-small,
+  .highlight__location  {
+    font-size: .66em;
+  }
+}
+
+@media (min-width: $bp-l) {
+  .source {
+    margin-bottom: 5em;
+    padding: 0 6em;
+  }
+
+  .highlight {
+    margin-bottom: $margin-l;
+  }
+}
+
+@media (min-width: $bp-xl) {
+  .source__info {
+    margin-right: 5em;
+  }
+}

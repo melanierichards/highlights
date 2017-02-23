@@ -3,7 +3,7 @@ layout: post
 title: Life After Life
 source: life-after-life
 author: Kate Atkinson
-edition: Kindle
+kindle: true
 date: 2016-07-24
 tags:
   - fiction

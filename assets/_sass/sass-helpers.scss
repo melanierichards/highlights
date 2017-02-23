@@ -1,0 +1,44 @@
+/*
+ *	VARIABLES
+ *	---------------------------------------------
+ */
+
+ /* FONTS */
+ $font-body: Karla, 'San Francisco', 'Segoe UI', 'Helvetica Neue', sans-serif;
+ $font-secondary: 'Sorts Mill Goudy', 'Goudy Old Style', 'Garamond', serif;
+
+/* BREAKPOINTS */
+$bp-xs: 25em;
+$bp-s: 42em;
+$bp-m: 48em;
+$bp-l: 60em;
+$bp-xl: 75em;
+$bp-xxl: 100em;
+
+/* MARGINS */
+$margin-l: 2.5em;
+$margin-m: 1.5em;
+$margin-s: 1em;
+$margin-xs: .5em;
+
+/* COLORS */
+$color-bg: #000;
+$color-body: #d2d2d2;
+$color-border: #999;
+$color-secondary: #a2a2a2;
+
+/*
+ *	MIXINS
+ *	---------------------------------------------
+ */
+
+@mixin all-caps() {
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+@mixin pseudo() {
+  display: block;
+  content: '';
+  position: absolute;
+}

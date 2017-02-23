@@ -1,16 +1,24 @@
-<article class="post">
+<article class="source">
   {% assign current_source = post.source %}
-  {% if individualPost %}
-    <h1>Highlights from {{ post.title }} by {{ post.author }}</h1>
-  {% else %}
-    <h2>{{ post.title }} by {{ post.author }}</h2>
-  {% endif %}
+  <div class="source__info">
+    {% if individualPost %}
+      <h1 class="source__title"><span class="source__title-small">Highlights from</span> {{ post.title }} by {{ post.author }}</h1>
+    {% else %}
+      <h2 class="source__title">{{ post.title }} by {{ post.author }}</h2>
+    {% endif %}
+    <div class="source__image">
+      {% include svgs/abstract-handmaids-tale.svg %}
+    </div>
+    {% if post.kindle %}
+      <p class="special-edition">Kindle edition</p>
+    {% endif %}
+  </div>
 
-  <ul>
+  <ul class="highlights">
     {% for highlight in site.data[current_source] %}
-      <li>
+      <li class="highlight">
         <p>{{ highlight.text }}</p>
-        <span>{{ highlight.page }}</span>
+        <span class="highlight__location">{{ highlight.page }}</span>
       </li>
     {% endfor %}
   </ul>

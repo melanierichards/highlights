@@ -11,7 +11,7 @@ images: /assets/images/content
 # Blog settings
 paginate: 10
 paginate_path: "/all/page:num/"
-permalink: /highlights/:title/
+permalink: /source/:title/
 
 # Build settings
 markdown: kramdown
