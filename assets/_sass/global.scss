@@ -17,7 +17,8 @@ body {
 }
 
 :focus {
-  outline: 1px dashed #000;
+  outline: 1px dotted #fff;
+  outline-offset: 1px;
 }
 
 ::selection {
@@ -91,4 +92,30 @@ img {
   display: block;
   margin-bottom: 1em;
   max-width: 100%;
+}
+
+/*
+ *	PERMALINKS
+ *	---------------------------------------------
+ */
+
+.permalink {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 .25em 0 -5px;
+  width: 30px;
+  height: 20px;
+  background: url('../images/link.svg') no-repeat 0 0;
+  background-size: 30px 20px;
+  text-indent: 100%;
+  overflow: hidden;
+  opacity: .5;
+
+  &:focus {
+    opacity: .75;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
 }

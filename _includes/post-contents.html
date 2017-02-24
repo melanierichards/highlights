@@ -16,8 +16,13 @@
 
   <ul class="highlights">
     {% for highlight in site.data[current_source] %}
-      <li class="highlight">
-        <p>{{ highlight.text }}</p>
+      <li class="highlight" id="{{ highlight.text | downcase | slice: 0, 15 | url_encode }}">
+        <p class="highlight__text">
+          <span>{{ highlight.text }}</span>
+        </p>
+        {% if individualPost %}
+          <a href="#{{ highlight.text | downcase | slice: 0, 15 | url_encode }}" class="permalink highlight__link">Permalink</a>
+        {% endif %}
         <span class="highlight__location">{{ highlight.page }}</span>
       </li>
     {% endfor %}

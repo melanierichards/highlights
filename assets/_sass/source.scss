@@ -54,6 +54,34 @@
   }
 }
 
+.highlight__location,
+.highlight__link {
+  color: #fff;
+  opacity: .25;
+  transition: opacity 200ms;
+}
+
+.highlight--active,
+.highlight:hover {
+  .highlight__location,
+  .highlight__link {
+    opacity: .5;
+  }
+
+  .highlight__link:hover {
+    opacity: 1;
+  }
+}
+
+.highlight--active {
+  .highlight__text span {
+    padding: .125em .25em;
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+  }
+}
+
 @media (min-width: $bp-s) {
   .page-wrap {
     text-align: center;
