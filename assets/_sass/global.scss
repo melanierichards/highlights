@@ -95,6 +95,23 @@ img {
 }
 
 /*
+ *	FORM ELEMENTS
+ *	---------------------------------------------
+ */
+
+button {
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/*
  *	PERMALINKS
  *	---------------------------------------------
  */
