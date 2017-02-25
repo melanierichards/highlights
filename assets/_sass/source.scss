@@ -61,10 +61,13 @@
   transition: opacity 200ms;
 }
 
+.highlight__link {
+  opacity: .5;
+}
+
 .highlight--active,
 .highlight:hover {
-  .highlight__location,
-  .highlight__link {
+  .highlight__location {
     opacity: .5;
   }
 
