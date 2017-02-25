@@ -10,18 +10,17 @@
       {% include svgs/abstract-handmaids-tale.svg %}
     </div>
     {% unless individualPost %}
-      <a href="{{ post.url}}" class="permalink highlight__link">Source permalink</a>
+      <a href="{{ post.url}}" class="permalink highlight__link">Permalink</a>
     {% endunless %}
-    {% if post.kindle %}
-      <p class="special-edition">Kindle edition</p>
-    {% endif %}
   </div>
 
   <ul class="highlights">
     {% for highlight in site.data[current_source] %}
       <li class="highlight" id="{{ highlight.text | downcase | slice: 0, 15 | url_encode }}">
         <p class="highlight__text">{{ highlight.text }}</p>
-        <a href="{{ post.url}}#{{ highlight.text | downcase | slice: 0, 15 | url_encode }}" class="permalink highlight__link">Highlight permalink</a>
+        {% if individualPost %}
+          <a href="{{ post.url}}#{{ highlight.text | downcase | slice: 0, 15 | url_encode }}" class="permalink highlight__link" title="Highlight permalink"></a>
+        {% endif %}
         <span class="highlight__location">{{ highlight.page }}</span>
       </li>
     {% endfor %}

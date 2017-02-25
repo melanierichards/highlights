@@ -24,7 +24,6 @@
 }
 
 .source__title-small,
-.special-edition,
 .highlight__location  {
   color: $color-secondary;
   font: .75em/1.2 $font-body;
@@ -38,10 +37,6 @@
 
 .source__image {
   margin: 0 auto $margin-xs;
-}
-
-.special-edition {
-  display: inline-block;
 }
 
 .highlights {

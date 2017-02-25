@@ -124,13 +124,15 @@ button {
   display: inline-block;
   vertical-align: middle;
   margin: 0 .25em 0 -5px;
-  width: 30px;
+  padding-left: 30px;
+  min-width: 30px;
   height: 20px;
   background: url('../images/link.svg') no-repeat 0 0;
   background-size: 30px 20px;
-  text-indent: 100%;
   overflow: hidden;
   opacity: .5;
+  font: .75em/20px $font-body;
+  @include all-caps();
 
   &:focus {
     opacity: .75;
