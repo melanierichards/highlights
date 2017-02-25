@@ -36,6 +36,10 @@ a:link, a:visited {
   color: #fff;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 @media (max-width: $bp-xs) {
   body {
     padding: 1.25em;
