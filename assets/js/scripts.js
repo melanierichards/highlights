@@ -1,3 +1,11 @@
+// Load hi-fi covers
+var covers = document.querySelectorAll('.source__image');
+for (var i = 0; i < covers.length; i++) {
+  if (covers[i].hasAttribute('data-bgSrc')) {
+    covers[i].style.backgroundImage = 'url("' + covers[i].getAttribute('data-bgSrc') + '")';
+  }
+}
+
 // Make highlight stand out when permalinked
 var activateHighlight = function(hash) {
   var highlight = document.getElementById(hash);

@@ -36,7 +36,21 @@
 }
 
 .source__image {
+  display: inline-block;
   margin: 0 auto $margin-xs;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 200px auto;
+
+  svg {
+    transition: opacity 400ms;
+  }
+}
+
+a.source__image:hover {
+  svg {
+    opacity: 0;
+  }
 }
 
 .highlights {

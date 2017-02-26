@@ -3,12 +3,15 @@
   <div class="source__info">
     {% if individualPost %}
       <h1 class="source__title"><span class="source__title-small">Highlights from</span> {{ post.title }} by {{ post.author }}</h1>
+      <div class="source__image">
+        {% include svgs/{{ post.source }}.svg %}
+      </div>
     {% else %}
       <h2 class="source__title">{{ post.title }} by {{ post.author }}</h2>
+      <a href="{{ post.url}}" class="source__image" data-bgSrc="/assets/images/covers/{{ post.source }}.jpg">
+        {% include svgs/{{ post.source }}.svg %}
+      </a>
     {% endif %}
-    <div class="source__image">
-      {% include svgs/abstract-handmaids-tale.svg %}
-    </div>
     {% unless individualPost %}
       <a href="{{ post.url}}" class="permalink highlight__link">Permalink</a>
     {% endunless %}
