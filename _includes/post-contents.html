@@ -4,7 +4,7 @@
     {% if individualPost %}
       <h1 class="source__title"><span class="source__title-small">Highlights from</span> {{ post.title }} by {{ post.author }}</h1>
       <div class="source__image">
-        {% include svgs/{{ current_source }}.svg %}
+        <img src="/assets/images/covers/{{ current_source }}.jpg">
       </div>
     {% else %}
       <h2 class="source__title">{{ post.title }} by {{ post.author }}</h2>
