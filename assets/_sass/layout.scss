@@ -27,14 +27,13 @@
 }
 
 @media (min-width: $bp-l) {
-  .site-footer {
-    text-align: center;
-  }
-}
-
-@media (min-width: $bp-l) {
   .page-wrap {
     margin: 4em auto 0;
+    padding: 0 6em;
+  }
+
+  .site-footer {
+    text-align: center;
   }
 }
 
