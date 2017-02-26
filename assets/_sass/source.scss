@@ -47,9 +47,16 @@
   }
 }
 
-a.source__image:hover {
-  svg {
-    opacity: 0;
+a.source__image {
+  opacity: .75;
+  transition: opacity 400ms;
+
+  &:hover {
+    opacity: 1;
+    
+    svg {
+      opacity: 0;
+    }
   }
 }
 

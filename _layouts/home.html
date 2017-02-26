@@ -1,0 +1,13 @@
+{% include head.html %}
+{% include header.html %}
+
+<div class="covers">
+  {% for post in site.posts %}
+    {% assign current_source = post.source %}
+    <a href="{{ post.url}}" class="source__image cover" data-bgSrc="/assets/images/covers/{{ current_source }}.jpg" title="{{ post.title }}">
+      {% include svgs/{{ current_source }}.svg %}
+    </a>
+  {% endfor %}
+</div>
+
+{% include footer.html %}
