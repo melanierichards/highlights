@@ -11,3 +11,14 @@
   vertical-align: middle;
   margin: 0 1.5em 3em;
 }
+
+@media (min-width: $bp-xxl) {
+  .cover {
+    width: 240px;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -171,3 +171,9 @@ a.source__image {
     margin-right: 5em;
   }
 }
+
+@media (min-width: $bp-xxl) {
+  .source__info {
+    width: 280px;
+  }
+}

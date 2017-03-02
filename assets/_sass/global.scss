@@ -66,6 +66,18 @@ ul {
   }
 }
 
+@media (min-width: $bp-xxl) {
+  body {
+    font-size: 1.25em;
+  }
+}
+
+@media (min-width: 125em) {
+  body {
+    font-size: 1.325em;
+  }
+}
+
 /*
  *	UTILITIES
  *	---------------------------------------------
