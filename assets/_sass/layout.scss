@@ -11,6 +11,15 @@
 .site-footer {
   margin: 0 auto 4em;
   font-size: .825em;
+
+  a {
+    border-bottom: 1px solid;
+  }
+
+  a:hover {
+    background: #fff;
+    color: #000;
+  }
 }
 
 @supports(pointer-events: none) {
