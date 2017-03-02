@@ -30,11 +30,20 @@ var removeHighlight = function() {
 };
 
 var highlightSwitch = function(e) {
-  if (e.target.href && e.target.href.indexOf('#') > -1) {
-    removeHighlight();
-    var href = e.target.href;
-    var hash = href.substr(href.indexOf('#') + 1);
-    activateHighlight(hash);
+  if (e.target.tagName === 'A') {
+    var targetLink = e.target.href.toString();
+  } else if (e.target.parentNode.tagName === 'A') {
+    var targetLink = e.target.parentNode.href.toString();
+  } else if (e.target.parentNode.parentNode.tagName === 'A') {
+    var targetLink = e.target.parentNode.parentNode.href.toString();
+  }
+  if (targetLink && targetLink.indexOf('#') > -1) {
+    e.preventDefault();
+    var hash = targetLink.substr(targetLink.indexOf('#') + 1);
+    if (document.getElementById(hash).className.indexOf('highlight--active') === -1) {
+      removeHighlight();
+      activateHighlight(hash);
+    }
   }
 };
 
@@ -49,7 +58,7 @@ window.addEventListener('click', highlightSwitch, false);
 
 // Clear featured highlight
 var clickClear = function(e) {
-  if (e.target.id === 'js-clearHighlight') {
+  if (e.target.id === 'js-clearHighlight' || e.target.parentNode.id === 'js-clearHighlight') {
     removeHighlight();
     var hashIndex = window.location.href.indexOf('#');
     var hashlessURL = window.location.href.slice(0, hashIndex);
