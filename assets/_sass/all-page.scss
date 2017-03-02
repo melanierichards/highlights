@@ -1,0 +1,21 @@
+/*
+ *	"ALL" PAGE
+ *	---------------------------------------------
+ */
+
+.pagination {
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.pagination__older,
+.pagination__newer {
+  display: inline-block;
+  margin: 0 1em;
+  opacity: .5;
+  transition: opacity 200ms;
+
+  &:hover {
+    opacity: 1;
+  }
+}
