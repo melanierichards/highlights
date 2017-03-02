@@ -98,6 +98,15 @@ img {
   max-width: 100%;
 }
 
+svg {
+  display: block;
+}
+
+/* SVG reference sprite */
+.sprite {
+  display: none;
+}
+
 /*
  *	FORM ELEMENTS
  *	---------------------------------------------
@@ -123,16 +132,16 @@ button {
 .permalink {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 .25em 0 -5px;
-  padding-left: 30px;
-  min-width: 30px;
-  height: 20px;
-  background: url('../images/link.svg') no-repeat 0 0;
-  background-size: 30px 20px;
-  overflow: hidden;
+  margin-left: -5px;
   opacity: .5;
   font: .75em/20px $font-body;
   @include all-caps();
+
+  svg {
+    display: inline-block;
+    margin-right: .25em;
+    vertical-align: middle;
+  }
 
   &:focus {
     opacity: .75;
@@ -157,18 +166,10 @@ button {
 .pagination__newer {
   display: inline-block;
   margin: 0 1em;
-  width: 1.875em;
-  height: 1.875em;
-  background: url('../images/older.svg') no-repeat 0 0;
-  background-size: 1.875em 1.875em;
   opacity: .5;
   transition: opacity 200ms;
 
   &:hover {
     opacity: 1;
   }
-}
-
-.pagination__newer {
-  background-image: url('../images/newer.svg');
 }
