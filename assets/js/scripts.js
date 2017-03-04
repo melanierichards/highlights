@@ -30,13 +30,7 @@ var removeHighlight = function() {
 };
 
 var highlightSwitch = function(e) {
-  if (e.target.tagName === 'A') {
-    var targetLink = e.target.href.toString();
-  } else if (e.target.parentNode.tagName === 'A') {
-    var targetLink = e.target.parentNode.href.toString();
-  } else if (e.target.parentNode.parentNode.tagName === 'A') {
-    var targetLink = e.target.parentNode.parentNode.href.toString();
-  }
+  var targetLink = e.currentTarget.href.toString();
   if (targetLink && targetLink.indexOf('#') > -1) {
     e.preventDefault();
     var hash = targetLink.substr(targetLink.indexOf('#') + 1);
@@ -54,7 +48,10 @@ if (window.location.hash) {
   }
 }
 
-window.addEventListener('click', highlightSwitch, false);
+var permalinks = document.querySelectorAll('.highlight__link');
+for (var i = 0; i < permalinks.length; i++) {
+  permalinks[i].addEventListener('click', highlightSwitch, true);
+}
 
 // Clear featured highlight
 var clickClear = function(e) {
