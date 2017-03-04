@@ -24,8 +24,12 @@ var activateHighlight = function(hash) {
 var removeHighlight = function() {
   var highlighted = document.querySelector('.highlight--active');
   if (highlighted !== null) {
+    var highlightText = highlighted.querySelector('.highlight__text');
     highlighted.className = 'highlight';
-    document.getElementById('js-clearHighlight').remove();
+    highlightText.innerHTML = highlightText.innerText;
+    if (document.getElementById('js-clearHighlight')) {
+      this.remove();
+    }
   }
 };
 
