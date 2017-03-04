@@ -36,7 +36,6 @@ var removeHighlight = function() {
 var highlightSwitch = function(e) {
   var targetLink = e.currentTarget.href.toString();
   if (targetLink && targetLink.indexOf('#') > -1) {
-    e.preventDefault();
     var hash = targetLink.substr(targetLink.indexOf('#') + 1);
     if (document.getElementById(hash).className.indexOf('highlight--active') === -1) {
       removeHighlight();
