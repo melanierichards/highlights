@@ -17,6 +17,25 @@
   <link rel="icon" href="/assets/images/favicon-62.png" sizes="62x62" type="image/png">
   <link rel="icon" href="/assets/images/favicon-192.png" sizes="192x192" type="image/png">
 
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@somelaniesaid" />
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }} | {% endif %} highlights.melanie-richards.com" />
+  <meta name="twitter:description" content="Some snippets I thought worth highlighting and saving for later" />
+  {% if page.source %}
+    <meta name="twitter:image" content="/assets/images/covers/{{ page.source }}.jpg" />
+  {% else %}
+    <meta name="twitter:image" content="/assets/images/share-icon.png" />  
+  {% endif %}
+
+  <meta name="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="og:title" content="{% if page.title %}{{ page.title | escape }} | {% endif %} highlights.melanie-richards.com">
+  <meta name="og:description" content="Some snippets I thought worth highlighting and saving for later">
+  {% if page.source %}
+    <meta name="og:image" content="/assets/images/covers/{{ page.source }}.jpg">
+  {% else %}
+    <meta name="og:image" content="/assets/images/share-icon.png">
+  {% endif %}
+
   <link href="https://fonts.googleapis.com/css?family=Karla|Sorts+Mill+Goudy" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
