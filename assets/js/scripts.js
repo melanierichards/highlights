@@ -21,6 +21,17 @@ var activateHighlight = function(hash) {
   highlight.focus();
 };
 
+var smoothUpdateURL = function(hash, highlight) {
+  var hashIndex = window.location.href.indexOf('#');
+  if (hashIndex === -1) {
+    var hashlessURL = window.location.href;
+  } else {
+    var hashlessURL = window.location.href.slice(0, hashIndex);
+  }
+  highlight.scrollIntoView({behavior: 'smooth'});
+  history.replaceState(null, null, hashlessURL + '#' + hash);
+};
+
 var removeHighlight = function() {
   var highlighted = document.querySelector('.highlight--active');
   if (highlighted !== null) {
@@ -37,9 +48,12 @@ var highlightSwitch = function(e) {
   var targetLink = e.currentTarget.href.toString();
   if (targetLink && targetLink.indexOf('#') > -1) {
     var hash = targetLink.substr(targetLink.indexOf('#') + 1);
-    if (document.getElementById(hash).className.indexOf('highlight--active') === -1) {
+    var highlight = document.getElementById(hash);
+    if (highlight.className.indexOf('highlight--active') === -1) {
       removeHighlight();
       activateHighlight(hash);
+      e.preventDefault();
+      smoothUpdateURL(hash, highlight);
     }
   }
 };
