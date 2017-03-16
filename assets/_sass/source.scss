@@ -48,14 +48,26 @@
 }
 
 a.source__image {
-  opacity: .75;
-  transition: opacity 400ms;
+  svg {
+    opacity: 0;
+  }
+}
 
-  &:hover {
-    opacity: 1;
-    
+@media (hover) {
+  a.source__image {
+    opacity: .75;
+    transition: opacity 400ms;
+
     svg {
-      opacity: 0;
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 1;
+      
+      svg {
+        opacity: 0;
+      }
     }
   }
 }
