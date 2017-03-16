@@ -1,2 +1,5 @@
 # Highlights
-Minisite for book and article highlights. Content in the highlights is copyright to their respective authors.
+
+![Screenshot of the website](images/screenshot.png)
+
+Nothin’ fancy, just a little Jekyll/GH Pages minisite for book and article highlights: [highlights.melanie-richards.com](http://highlights.melanie-richards.com) Highlights and covers are copyright to their respective authors. [Let’s be book friends](https://www.goodreads.com/melanierichards)
