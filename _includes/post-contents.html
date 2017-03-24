@@ -26,6 +26,7 @@
     {% for highlight in site.data[current_source] %}
       <li class="highlight" id="{{ highlight.text | downcase | slice: 0, 15 | url_encode }}">
         <p class="highlight__text">{{ highlight.text }}</p>
+        {% if highlight.attribution %}<cite class="highlight__attribution"> — {{ highlight.attribution}}</cite>{% endif %}
         {% if individualPost %}
           <a href="{{ post.url}}#{{ highlight.text | downcase | slice: 0, 15 | url_encode }}" class="permalink highlight__link" title="Highlight permalink">
             <svg viewBox="0 0 30 20" width="30" height="20">

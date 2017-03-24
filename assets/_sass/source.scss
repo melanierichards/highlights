@@ -85,6 +85,14 @@ a.source__image {
   }
 }
 
+.highlight__attribution {
+  display: block;
+  margin: .5em 0;
+  @include all-caps();
+  font-size: .888em;
+  font-style: normal;
+}
+
 .highlight__location,
 .highlight__link {
   color: #fff;
