@@ -1,5 +1,5 @@
 // Load hi-fi covers
-var covers = document.querySelectorAll('.source__image');
+var covers = document.querySelectorAll('.book__image');
 for (var i = 0; i < covers.length; i++) {
   if (covers[i].hasAttribute('data-bgSrc')) {
     covers[i].style.backgroundImage = 'url("' + covers[i].getAttribute('data-bgSrc') + '")';

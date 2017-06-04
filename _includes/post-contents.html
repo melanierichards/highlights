@@ -1,15 +1,15 @@
-<article class="source">
-  {% assign current_source = post.source %}
-  <div class="source__info">
+<article class="book">
+  {% assign current_book = post.book %}
+  <div class="book__info">
     {% if individualPost %}
-      <h1 class="source__title"><span class="source__title-small">Highlights from</span> {{ post.title }} by {{ post.author }}</h1>
-      <div class="source__image">
-        <img src="/assets/images/covers/{{ current_source }}.jpg" alt="Cover of {{ post.title }}" />
+      <h1 class="book__title"><span class="book__title-small">Highlights from</span> {{ post.title }} by {{ post.author }}</h1>
+      <div class="book__image">
+        <img src="/assets/images/covers/{{ current_book }}.jpg" alt="Cover of {{ post.title }}" />
       </div>
     {% else %}
-      <h2 class="source__title">{{ post.title }} by {{ post.author }}</h2>
-      <a href="{{ post.url}}" class="source__image" data-bgSrc="/assets/images/covers/{{ current_source }}.jpg">
-        {% include svgs/{{ current_source }}.svg %}
+      <h2 class="book__title">{{ post.title }} by {{ post.author }}</h2>
+      <a href="{{ post.url}}" class="book__image" data-bgSrc="/assets/images/covers/{{ current_book }}.jpg">
+        {% include svgs/{{ current_book }}.svg %}
       </a>
     {% endif %}
     {% unless individualPost %}
@@ -23,7 +23,7 @@
   </div>
 
   <ul class="highlights">
-    {% for highlight in site.data[current_source] %}
+    {% for highlight in site.data[current_book] %}
       <li class="highlight" id="{{ highlight.text | downcase | slice: 0, 15 | url_encode }}">
         <p class="highlight__text">{{ highlight.text }}</p>
         {% if highlight.attribution %}<cite class="highlight__attribution"> — {{ highlight.attribution}}</cite>{% endif %}

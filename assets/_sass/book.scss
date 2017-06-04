@@ -1,41 +1,41 @@
 /*
- *	SOURCE (A BOOK OR GROUP OF ARTICLES)
+ *	book (A BOOK OR GROUP OF ARTICLES)
  *	---------------------------------------------
  */
 
-.source {
+.book {
   margin-bottom: 3em;
 }
 
-.source + .source {
+.book + .book {
   border-top: 3px double $color-border;
   padding-top: $margin-m;
 }
 
-.source__info {
+.book__info {
   margin: 0 auto $margin-l;
   width: 12.5em;
   text-align: center;
 }
 
-.source__title {
+.book__title {
   margin-bottom: $margin-s;
   font: 1.166em/1.2 $font-secondary;
 }
 
-.source__title-small,
+.book__title-small,
 .highlight__location  {
   color: $color-secondary;
   font: .75em/1.2 $font-body;
   @include all-caps();
 }
 
-.source__title-small {
+.book__title-small {
   display: block;
   margin-bottom: 1em;
 }
 
-.source__image {
+.book__image {
   display: inline-block;
   margin: 0 auto $margin-xs;
   background-repeat: no-repeat;
@@ -43,7 +43,7 @@
   background-size: 100% auto;
 }
 
-a.source__image {
+a.book__image {
   opacity: .75;
   transition: opacity 400ms;
 
@@ -57,7 +57,7 @@ a.source__image {
 }
 
 @media (hover) {
-  a.source__image {
+  a.book__image {
     svg {
       opacity: 1;
       transition: opacity 400ms;
@@ -143,18 +143,18 @@ a.source__image {
     text-align: center;
   }
 
-  .source {
+  .book {
     display: inline-block;
     margin-right: auto;
     margin-left: auto;
   }
 
-  .source + .source {
+  .book + .book {
     padding-top: 0;
     border-top: 0;
   }
 
-  .source__info {
+  .book__info {
     float: left;
     top: 2em;
     position: -webkit-sticky;
@@ -171,14 +171,14 @@ a.source__image {
     text-align: left;
   }
 
-  .source__title-small,
+  .book__title-small,
   .highlight__location  {
     font-size: .66em;
   }
 }
 
 @media (min-width: $bp-l) {
-  .source {
+  .book {
     margin-bottom: 5em;
   }
 
@@ -188,13 +188,13 @@ a.source__image {
 }
 
 @media (min-width: $bp-xl) {
-  .source__info {
+  .book__info {
     margin-right: 5em;
   }
 }
 
 @media (min-width: $bp-xxl) {
-  .source__info {
+  .book__info {
     width: 280px;
   }
 }

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Life After Life
-source: life-after-life
+book: life-after-life
 author: Kate Atkinson
 kindle: true
 date: 2016-07-24
