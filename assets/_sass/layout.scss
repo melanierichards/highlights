@@ -21,6 +21,10 @@
     background: #fff;
     color: #000;
   }
+  
+  small {
+    font-size: inherit;
+  }
 }
 
 @supports(pointer-events: none) {

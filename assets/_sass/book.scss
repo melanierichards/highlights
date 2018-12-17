@@ -24,7 +24,7 @@
 }
 
 .book__title-small,
-.highlight__location  {
+.highlight__meta {
   color: $color-secondary;
   font: .75em/1.2 $font-body;
   @include all-caps();
@@ -89,29 +89,43 @@ a.book__image {
   display: block;
   margin: .5em 0;
   @include all-caps();
-  font-size: .888em;
+  font-size: .875em;
   font-style: normal;
 }
 
-.highlight__location,
-.highlight__link {
-  color: #fff;
-  opacity: .25;
-  transition: opacity 200ms;
+.highlight__location {
+  vertical-align: middle;
 }
 
 .highlight__link {
+  @include all-caps();
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-left: 1em;
+  padding: .5em .5em .5em 36px;
+  font: 1em/20px $font-body;
   opacity: .5;
-}
-
-.highlight--active,
-.highlight:hover {
-  .highlight__location {
-    opacity: .5;
+  transition: opacity 200ms;
+  
+  svg {
+    position: absolute;
+    left: 0;
   }
 
-  .highlight__link:hover {
+  span {
+    transition: opacity 200ms;
+    opacity: 0;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
     opacity: 1;
+
+    span {
+      opacity: .75;
+    }
   }
 }
 
@@ -154,6 +168,10 @@ a.book__image {
     border-top: 0;
   }
 
+  .book__title-small {
+    font-size: .66em;
+  }
+
   .book__info {
     float: left;
     top: 2em;
@@ -169,11 +187,6 @@ a.book__image {
     width: auto;
     overflow: hidden;
     text-align: left;
-  }
-
-  .book__title-small,
-  .highlight__location  {
-    font-size: .66em;
   }
 }
 
