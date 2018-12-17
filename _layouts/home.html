@@ -1,13 +1,17 @@
 {% include head.html %}
 {% include header.html %}
 
-<div class="covers">
+<h1 class="sr-only">Explore all books</h1>
+
+<ul class="covers">
   {% for post in site.posts %}
-    {% assign current_book = post.book %}
-    <a href="{{ post.url}}" class="book__image cover" data-bgSrc="/assets/images/covers/{{ current_book }}.jpg" title="{{ post.title }}">
-      {% include svgs/{{ current_book }}.svg %}
-    </a>
+    <li class="cover">
+      {% assign current_book = post.book %}
+      <a href="{{ post.url}}" class="book__image" data-bgSrc="/assets/images/covers/{{ current_book }}.jpg" title="{{ post.title }}">
+        {% include svgs/{{ current_book }}.svg %}
+      </a>
+    </li>
   {% endfor %}
-</div>
+</ul>
 
 {% include footer.html %}
