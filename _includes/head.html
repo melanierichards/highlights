@@ -22,18 +22,19 @@
   <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }} | {% endif %} highlights.melanie-richards.com" />
   <meta name="twitter:description" content="Some snippets I thought worth highlighting and saving for later" />
   {% if page.book %}
-    <meta name="twitter:image" content="/assets/images/covers/{{ page.book }}.jpg" />
+    <meta name="twitter:image:src" content="{{ site.url }}/assets/images/covers/{{ page.book }}.jpg" />
+    <meta name="twitter:image:alt" content="Cover of {{ page.title }}" />
   {% else %}
-    <meta name="twitter:image" content="/assets/images/share-icon.png" />  
+    <meta name="twitter:image:src" content="{{ site.url }}/assets/images/share-icon.png" />  
   {% endif %}
 
   <meta name="og:url" content="{{ site.url }}{{ page.url }}">
   <meta name="og:title" content="{% if page.title %}{{ page.title | escape }} | {% endif %} highlights.melanie-richards.com">
   <meta name="og:description" content="Some snippets I thought worth highlighting and saving for later">
   {% if page.book %}
-    <meta name="og:image" content="/assets/images/covers/{{ page.book }}.jpg">
+    <meta name="og:image" content="{{ site.url }}/assets/images/covers/{{ page.book }}.jpg">
   {% else %}
-    <meta name="og:image" content="/assets/images/share-icon.png">
+    <meta name="og:image" content="{{ site.url }}/assets/images/share-icon.png">
   {% endif %}
 
   <link href="https://fonts.googleapis.com/css?family=Karla|Sorts+Mill+Goudy" rel="stylesheet">
