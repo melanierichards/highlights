@@ -2,3 +2,6 @@ _site/
 .sass-cache/
 .jekyll-metadata
 .jekyll-cache
+
+*.bak
+*:Zone.Identifier
