@@ -4,6 +4,8 @@
 
 Nothin’ fancy, just a little Jekyll/GH Pages minisite for book and article highlights: [highlights.melanie-richards.com](http://highlights.melanie-richards.com) Highlights and covers are copyright to their respective authors. [Let’s be book friends](https://www.goodreads.com/melanierichards)
 
+Note: the `master` branch has been renamed to `main`. Folks who have forked the repo can [update their local clones using these instructions](https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx).
+
 ## Data syntax
 
 ### Book front-page matter
