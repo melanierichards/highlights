@@ -21,3 +21,6 @@ markdown: kramdown
 sass:
   sass_dir: assets/_sass
   style: compressed
+
+# Custom variable
+twitter: "@somelaniesaid"
