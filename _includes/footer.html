@@ -1,12 +1,12 @@
   </main>
   <nav class="site-nav">
-    <a href="/">Browse by book</a>
-    <a href="/all/">See all highlights</a>
+    <a href="{{ '/' | relative_url }}">Browse by book</a>
+    <a href="{{ '/all/' | relative_url }}">See all highlights</a>
   </nav>
   <footer class="site-footer">
     <small>Highlights and covers are copyright to their respective authors.<br /><a href="https://github.com/melanierichards/highlights">Peek at the code</a> for this project</small>
   </footer>
 
-  <script src="/assets/js/deps.js"></script>
-  <script src="/assets/js/scripts.js"></script>
+  <script src="{{ '/assets/js/deps.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
 </body>

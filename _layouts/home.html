@@ -7,7 +7,7 @@
   {% for post in site.posts %}
     <li class="cover">
       {% assign current_book = post.book %}
-      <a href="{{ post.url}}" class="book__image" data-bgSrc="/assets/images/covers/{{ current_book }}.jpg" title="{{ post.title }}">
+      <a href="{{ site.baseurl}}{{ post.url }}" class="book__image" data-bgSrc="{{ site.baseurl }}/assets/images/covers/{{ current_book }}.jpg" title="{{ post.title }}">
         {% include svgs/{{ current_book }}.svg %}
       </a>
     </li>
