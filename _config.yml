@@ -8,13 +8,19 @@ email: hello@melanie-richards.com
 url: "http://highlights.melanie-richards.com"
 images: /assets/images/content
 
+baseurl: /highlights
+images: /highlights/assets/images/content
+
 # Blog settings
 paginate: 10
 paginate_path: "/all/page:num/"
-permalink: /book/:title/
+permalink: "/book/:title/"
 
 # Build settings
 markdown: kramdown
 sass:
   sass_dir: assets/_sass
   style: compressed
+
+# Custom variable
+twitter: "@somelaniesaid"
