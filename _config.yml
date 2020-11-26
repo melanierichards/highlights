@@ -3,13 +3,12 @@ gems:
   - jekyll-paginate
 
 # Site settings
+# Add a value for `baseurl`, e.g. `/highlights` if you'd like to deploy from a subdirectory.
 title: Highlights from books and articles | Melanie Richards
 email: hello@melanie-richards.com
 url: "http://highlights.melanie-richards.com"
+baseurl:
 images: /assets/images/content
-
-baseurl: /highlights
-images: /highlights/assets/images/content
 
 # Blog settings
 paginate: 10

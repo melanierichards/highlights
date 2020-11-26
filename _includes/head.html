@@ -32,9 +32,9 @@
   <meta name="og:title" content="{% if page.title %}{{ page.title | escape }} | {% endif %} {{ site.url }}">
   <meta name="og:description" content="Some snippets I thought worth highlighting and saving for later">
   {% if page.book %}
-    <meta name="og:image" content="{{ '/assets/images/covers/{{ page.book }}.jpg' | relative_url }}">
+    <meta name="og:image" content="{{ '{{site.baseurl}}/assets/images/covers/{{ page.book }}.jpg' | relative_url }}">
   {% else %}
-    <meta name="og:image" content="{{ '/assets/images/share-icon.png' | relative_url }}">
+    <meta name="og:image" content="{{ '{{site.baseurl}}/assets/images/share-icon.png' | relative_url }}">
   {% endif %}
 
   <link href="https://fonts.googleapis.com/css?family=Karla|Sorts+Mill+Goudy" rel="stylesheet">
