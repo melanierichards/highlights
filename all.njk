@@ -1,0 +1,12 @@
+---
+layout: layouts/all.njk
+title: All highlights
+nav: true
+order: 2
+pagination:
+  data: collections.posts
+  size: 10
+  reverse: true
+  alias: posts
+permalink: /all/{% if pagination.pageNumber > 0 %}page{{ pagination.pageNumber + 1 }}/{% endif %}
+---
