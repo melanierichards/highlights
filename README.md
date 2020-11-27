@@ -12,7 +12,7 @@ The `master` branch was renamed to `main` in 2020. Folks who have forked the rep
 
 ### Migration from Jekyll to Eleventy
 
-The primary purpose of this repo is to deploy [highlights.melanie-richards.com](http://highlights.melanie-richards.com), though others may feel free to remix the code for their own highlights sites. As of late 2020, according to my current development practices, this site has been converted from Jekyll to Eleventy. If you'd still prefer to use Jekyll instead, you may access [prior releases](https://github.com/melanierichards/highlights/releases).
+The primary purpose of this repo is to deploy [highlights.melanie-richards.com](http://highlights.melanie-richards.com), though others may feel free to remix the code for their own highlights sites. As of late 2020, according to my current development practices, this site has been converted from Jekyll to Eleventy. If you'd still prefer to use Jekyll instead, you may access [prior releases](https://github.com/melanierichards/highlights/releases) or branch off of [`jekyll`](https://github.com/melanierichards/highlights/tree/jekyll).
 
 ## To build
 
