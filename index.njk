@@ -3,4 +3,10 @@ layout: layouts/home.njk
 title: Browse by book
 nav: true
 order: 1
+pagination:
+  data: collections.posts
+  size: 24
+  reverse: true
+  alias: posts
+permalink: /{% if pagination.pageNumber > 0 %}page{{ pagination.pageNumber + 1 }}/{% endif %}
 ---

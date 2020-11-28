@@ -4,7 +4,7 @@
 <h1 class="sr-only">Explore all books</h1>
 
 <ul class="covers">
-  {% for post in collections.posts | reverse %}
+  {% for post in posts %}
     <li class="cover">
       {% set current_book = post.data.book %}
       {% set current_svg = '/assets/svgs/' + current_book + '.svg' %}
@@ -16,4 +16,5 @@
   {% endfor %}
 </ul>
 
+{% include "pagination.njk" %}
 {% include "footer.njk" %}
