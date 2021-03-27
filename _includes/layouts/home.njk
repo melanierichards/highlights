@@ -9,7 +9,7 @@
       {% set current_book = post.data.book %}
       {% set current_svg = '/assets/svgs/' + current_book + '.svg' %}
       {% set current_cover = '/assets/images/covers/' + current_book + '.jpg' %}
-      <a href="{{ post.url | url }}" class="book__image" data-bgSrc="{{ current_cover | url }}" title="{{ post.title }}">
+      <a href="{{ post.url | url }}" class="book__image" data-bgSrc="{{ current_cover | url }}" title="{{ post.data.title }}">
         {{ current_svg | svgContents | safe }}
       </a>
     </li>
