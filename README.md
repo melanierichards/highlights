@@ -43,6 +43,7 @@ title: ""
 book: dash-separated
 author:
 kindle: true
+spoilers: false
 date: YYYY-MM-DD
 ```
 
