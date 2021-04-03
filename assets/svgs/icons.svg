@@ -11,5 +11,11 @@
     <symbol id="older">
       <path fill="none" stroke="#FFF" stroke-miterlimit="10" d="M22 29L8 15 22 1"/>
     </symbol>
+
+    <symbol id="spoilers">
+      <path fill="currentColor" d="M13 1v17.06l-5.42-3.87-.58-.42-.58.42L1 18.06V1h12m1-1H0v20l7-5 7 5V0z"/>
+      <path fill="currentColor" d="M7 4v4-4m1-1H6v6h2V3z"/>
+      <circle fill="currentColor" cx="7" cy="11" r="1"/>
+    </symbol>
   </defs>
 </svg>

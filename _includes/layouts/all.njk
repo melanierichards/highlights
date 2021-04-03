@@ -1,6 +1,9 @@
 {% include "head.njk" %}
 {% include "header.njk" %}
 
+<h1 class="sr-only">Highlights from all books</h1>
+<p class="sr-only" role="alert">Some books may contain spoilers</p>
+
 {% for post in posts %}
   {% set individualPost = false %}
   {% include "post-contents.njk" %}

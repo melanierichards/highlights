@@ -24,7 +24,8 @@
 }
 
 .book__title-small,
-.highlight__meta {
+.highlight__meta,
+.spoilers-note {
   color: $color-secondary;
   font: .75em/1.2 $font-body;
   @include all-caps();
@@ -72,10 +73,21 @@ a.book__image {
   }
 }
 
-.highlights {
+.highlights-wrap {
   padding-top: 1.25em;
   border-top: 1px solid $color-border;
   max-width: 40em;
+}
+
+.spoilers-note {
+  margin-bottom: $margin-m;
+  font-size: 1em;
+}
+
+.spoilers-note__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .25em;
 }
 
 .highlight {
@@ -199,7 +211,7 @@ a.book__image {
     width: 200px;
   }
 
-  .highlights {
+  .highlights-wrap {
     padding-top: 0;
     border-top: 0;
     width: auto;

@@ -3,11 +3,13 @@
   {% set current_book_url = url %}
   {% set current_book_title = title %}
   {% set current_book_author = author %}
+  {% set current_spoilers = spoilers %}
 {% else %}
   {% set current_book = post.data.book %}
   {% set current_book_url = post.url %}
   {% set current_book_title = post.data.title %}
   {% set current_book_author = post.data.author %}
+  {% set current_spoilers = post.data.spoilers %}
 {% endif %}
 
 {% set current_book_cover = '/assets/images/covers/' + current_book + '.jpg' %}
@@ -24,23 +26,35 @@
     </div>
   </div>
 
-  <ul class="highlights">
-    {% for highlight in books[current_book] %}
-      {% set highlight_perma = highlight.text | lower | urlencode | replace("%20", "+") | truncate(15, true, "") %}
-      <li class="highlight" id="{{ highlight_perma }}">
-        <p class="highlight__text">{{ highlight.text }}</p>
-        {% if highlight.attribution %}<cite class="highlight__attribution"> — {{ highlight.attribution}}</cite>{% endif %}
-        <div class="highlight__meta">
-          <span class="highlight__location">{{ highlight.page }}</span>
-          <a href="{{ current_book_url | url }}#{{ highlight_perma }}" class="highlight__link">
-            <svg focusable="false" aria-hidden="true" viewBox="0 0 30 20" width="30" height="20">
-              <use href="#link"></use>
-            </svg>
-            <span>Link</span>
-            <span class="sr-only">to {{ highlight.page }} highlight</span>
-          </a>
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
+  <section class="highlights-wrap" aria-labelledby="highlightsHeading">
+    {% if individualPost %}
+      <h2 class="sr-only" id="highlightsHeading">Highlights from this book</h2>
+    {% endif %}
+    {% if current_spoilers == true %}
+      <p class="spoilers-note" {% if individualPost %}role="alert"{% endif %}>
+        <svg class="spoilers-note__icon" focusable="false" aria-hidden="true" viewBox="0 0 14 20" width="14" height="20">
+          <use href="#spoilers"></use>
+        </svg>
+        Contains spoilers
+      </p>
+    {% endif %}
+    <ul class="highlights">
+      {% for highlight in books[current_book] %}
+        {% set highlight_perma = highlight.text | lower | urlencode | replace("%20", "+") | truncate(15, true, "") %}
+        <li class="highlight" id="{{ highlight_perma }}">
+          <p class="highlight__text">{{ highlight.text }}</p>
+          {% if highlight.attribution %}<cite class="highlight__attribution"> — {{ highlight.attribution}}</cite>{% endif %}
+          <div class="highlight__meta">
+            <span class="highlight__location">{{ highlight.page }}</span>
+            <a href="{{ current_book_url | url }}#{{ highlight_perma }}" class="highlight__link">
+              <svg focusable="false" aria-hidden="true" viewBox="0 0 30 20" width="30" height="20">
+                <use href="#link"></use>
+              </svg>
+              <span>Link</span>
+              <span class="sr-only">to {{ highlight.page }} highlight</span>
+            </a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
 </article>
