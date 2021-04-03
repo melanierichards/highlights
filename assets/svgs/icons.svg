@@ -1,4 +1,4 @@
-<svg class="sprite">
+<svg focusable="false" class="sprite">
   <defs>
     <symbol id="clear" fill="none" stroke="#FFF" stroke-miterlimit="10"><path d="M4 16L16 4M16 16L4 4"/></symbol>
 

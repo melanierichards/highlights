@@ -1,14 +1,14 @@
 <nav class="pagination" aria-label="pagination">
   {% if pagination.href.next %}
     <a class="pagination__older" href="{{ pagination.href.next | url }}" title="Older posts">
-      <svg viewBox="0 0 30 30" width="30" height="30">
+      <svg focusable="false" viewBox="0 0 30 30" width="30" height="30">
         <use href="#older"></use>
       </svg>
     </a>
   {% endif %}
   {% if pagination.href.previous %}
     <a class="pagination__newer" href="{{ pagination.href.previous | url }}" title="Newer posts">
-      <svg viewBox="0 0 30 30" width="30" height="30">
+      <svg focusable="false" viewBox="0 0 30 30" width="30" height="30">
         <use href="#newer"></use>
       </svg>
     </a>

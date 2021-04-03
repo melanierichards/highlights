@@ -20,7 +20,7 @@
       <h2 class="book__title">{{ current_book_title }} by {{ current_book_author }}</h2>
     {% endif %}
     <div class="book__image">
-      <img src="{{ current_book_cover | url }}" alt="Cover of {{ current_book_title }}" />
+      <img src="{{ current_book_cover | url }}" alt="Cover of {{ current_book_title }}">
     </div>
   </div>
 
@@ -33,7 +33,7 @@
         <div class="highlight__meta">
           <span class="highlight__location">{{ highlight.page }}</span>
           <a href="{{ current_book_url | url }}#{{ highlight_perma }}" class="highlight__link">
-            <svg aria-hidden="true" viewBox="0 0 30 20" width="30" height="20">
+            <svg focusable="false" aria-hidden="true" viewBox="0 0 30 20" width="30" height="20">
               <use href="#link"></use>
             </svg>
             <span>Link</span>

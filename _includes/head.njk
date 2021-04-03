@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width" />
   <meta name="description" content="{{ site.description }}">
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow">
   <!--[if lt IE 9]>
     <script src="{{ '/assets/js/html5shiv.js' | url }}"></script>
   <![endif]-->
@@ -18,10 +18,10 @@
   <link rel="alternate icon" href="{{ '/assets/images/favicon-62.png' | url }}" sizes="62x62" type="image/png">
   <link rel="alternate icon" href="{{ '/assets/images/favicon-192.png' | url }}" sizes="192x192" type="image/png">
 
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="{{ site.twitter }}" />
-  <meta name="twitter:title" content="{% if title %}{{ title | escape }} | {% endif %} {{ site.url | url }}" />
-  <meta name="twitter:description" content="{{ site.description }}" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="{{ site.twitter }}">
+  <meta name="twitter:title" content="{% if title %}{{ title | escape }} | {% endif %} {{ site.url | url }}">
+  <meta name="twitter:description" content="{{ site.description }}">
 
   <meta name="og:url" content="{{ site.url }}{{ url }}">
   <meta name="og:title" content="{% if title %}{{ title | escape }} | {% endif %} {{ site.url | url }}">
@@ -29,14 +29,14 @@
 
   {% if book %}
     {% set book_cover = '/assets/images/covers/' + book + '.jpg' %}
-    <meta name="twitter:image:src" content="{{ book_cover | url }}" />
-    <meta name="twitter:image:alt" content="Cover of {{ title }}" />
+    <meta name="twitter:image:src" content="{{ book_cover | url }}">
+    <meta name="twitter:image:alt" content="Cover of {{ title }}">
     <meta name="og:image" content="{{ book_cover | url }}">
   {% else %}
-    <meta name="twitter:image:src" content="{{ '/assets/images/share-icon.png' | url }}" />
+    <meta name="twitter:image:src" content="{{ '/assets/images/share-icon.png' | url }}">
     <meta name="og:image" content="{{ '/assets/images/share-icon.png' | url }}">
   {% endif %}
 
   <link href="https://fonts.googleapis.com/css?family=Karla|Sorts+Mill+Goudy" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v2020.11.27' | url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v2020.11.27' | url }}">
 </head>
