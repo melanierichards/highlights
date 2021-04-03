@@ -1,0 +1,5 @@
+[[plugins]]
+  package = "netlify-plugin-html-validate"
+
+  [plugins.inputs]
+    config = ".htmlvalidate.json"

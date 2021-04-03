@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/melanierichards/highlights#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^0.12.1",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^4.1.0",
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "eleventy-plugin-svg-contents": "^0.7.0",
-    "js-yaml": "^3.14.0"
+    "js-yaml": "^3.14.0",
+    "netlify-plugin-html-validate": "^1.0.0"
   }
 }

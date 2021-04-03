@@ -32,6 +32,7 @@ I've chosen to deploy my highlights to the root path of a subdomain, but others 
 | npx @11ty/eleventy --serve | Serve project                |
 | gulp sass:watch            | Watch and build sass files   |
 | gulp minify-css            | Compress the output CSS file |
+| netlify build              | Kick off a Netlify build locally. Useful for local validation w/ Netlify plugins. |
 
 ## Data syntax
 

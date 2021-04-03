@@ -13,3 +13,5 @@ package-lock.json
 
 *.bak
 *:Zone.Identifier
+# Local Netlify folder
+.netlify
