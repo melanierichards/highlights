@@ -13,7 +13,7 @@ var activateHighlight = function(hash) {
   for (var i = 0; i < highlight.childNodes.length; i++) {
     if (highlight.childNodes[i].className == 'highlight__text') {
       var highlightText = highlight.childNodes[i];
-      highlightText.innerHTML = '<span>' + highlightText.innerHTML + '</span> <button id="js-clearHighlight" class="btn--clear" title="Clear highlight feature"><svg viewBox="0 0 20 20" width="20" height="20"><use xlink:href="#clear"></use></svg></button>';
+      highlightText.innerHTML = '<span>' + highlightText.innerHTML + '</span> <button id="js-clearHighlight" class="btn--clear" title="Clear highlight permalink"><svg viewBox="0 0 20 20" width="20" height="20"><use xlink:href="#clear"></use></svg></button>';
       svg4everybody();
       break;
     }        

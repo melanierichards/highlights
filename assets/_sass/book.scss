@@ -133,6 +133,8 @@ a.book__image {
 
 .highlight--active {
   .highlight__text span {
+    position: relative;
+    z-index: 1;
     vertical-align: middle;
     padding: .125em .25em;
     background: #ebebeb;
@@ -142,8 +144,23 @@ a.book__image {
 }
 
 .btn--clear {
+  position: relative;
+  z-index: 2;
   margin-left: .25em;
   border: 1px solid transparent;
+  border-radius: 0;
+  padding: .5em;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 2.75rem;
+    height: 2.75rem;
+  }
 
   &:hover {
     border-color: #fff;
