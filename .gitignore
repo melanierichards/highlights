@@ -2,8 +2,8 @@
 # | Eleventy                                                           |
 # ----------------------------------------------------------------------
 
-_site/
-node_modules/
+_site
+node_modules
 package-lock.json
 .env
 
