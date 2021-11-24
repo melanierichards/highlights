@@ -4,7 +4,11 @@
   "description": "![Screenshot of the website](assets/images/screenshot.png?raw=true)",
   "main": ".eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "npx sass --style=compressed assets/_sass/style.scss assets/css/style.css",
+    "watch:sass": "npm run sass -- --watch",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "start": "npm-run-all sass --parallel watch:*",
+    "build": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
@@ -19,10 +23,9 @@
   "homepage": "https://github.com/melanierichards/highlights#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-sass": "^4.1.0",
-    "node-sass": "^5.0.0"
+    "eleventy-plugin-sass": "^1.2.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.43.4"
   },
   "dependencies": {
     "eleventy-plugin-svg-contents": "^0.7.0",
