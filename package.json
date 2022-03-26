@@ -21,15 +21,12 @@
     "url": "https://github.com/melanierichards/highlights/issues"
   },
   "homepage": "https://github.com/melanierichards/highlights#readme",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "eleventy-plugin-sass": "^1.2.0",
-    "npm-run-all": "^4.1.5",
-    "sass": "^1.43.4"
-  },
   "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
     "eleventy-plugin-svg-contents": "^0.7.0",
     "js-yaml": "^3.14.0",
-    "netlify-plugin-html-validate": "^1.0.0"
+    "netlify-plugin-html-validate": "^1.0.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.43.4"
   }
 }
