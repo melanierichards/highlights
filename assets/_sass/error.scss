@@ -6,4 +6,12 @@
 .error-msg {
   margin: 2em auto 0;
   max-width: 24em;
+
+  a:link, a:visited {
+    border-bottom: 1px solid;
+  }
+
+  a:hover {
+    border-bottom-style: dashed;
+  }
 }
