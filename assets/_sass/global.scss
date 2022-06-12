@@ -10,10 +10,17 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   padding: 2em;
   font: 400 100%/1.4 $font-body;
   color: $color-body;
   background: $color-bg;
+}
+
+main {
+  flex: 1;
 }
 
 :focus {
