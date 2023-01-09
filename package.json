@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/melanierichards/highlights#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.2",
     "eleventy-plugin-svg-contents": "^0.7.0",
     "js-yaml": "^3.14.0",
     "netlify-plugin-html-validate": "^1.0.0",
