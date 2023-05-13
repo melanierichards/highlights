@@ -10,8 +10,10 @@
 }
 
 .site-footer {
-  margin: 0 auto 4em;
   font-size: .825em;
+  margin: 0 auto 4em;
+  position: relative;
+  z-index: 3;
 
   a {
     border-bottom: 1px solid;
