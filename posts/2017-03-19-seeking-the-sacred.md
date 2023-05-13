@@ -1,5 +1,5 @@
 ---
-title: "Seeking the Sacred: Transforming Our View of Ourselves and One Another"
+title: "Seeking the Sacred"
 book: seeking-the-sacred
 author: Stephanie Dowrick
 kindle: false

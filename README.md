@@ -43,9 +43,11 @@ author:
 kindle: true
 spoilers: false
 date: YYYY-MM-DD
+bookshop_id:
 ```
 
-Where "dash-separated" is also the file name for the `_data` file, JPG, and SVG.
+* Where "dash-separated" is also the file name for the `_data` file, JPG, and SVG.
+* `bookshop_id` is used for bookshop.org buy links. The base template uses my affiliate link structure; feel free to replace with your own or remove these buy links entirely (though it’s nice to support authors!).
 
 ### Each highlight
 

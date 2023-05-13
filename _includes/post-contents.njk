@@ -4,12 +4,14 @@
   {% set current_book_title = title %}
   {% set current_book_author = author %}
   {% set current_spoilers = spoilers %}
+  {% set current_bookshop_id = bookshop_id %}
 {% else %}
   {% set current_book = post.data.book %}
   {% set current_book_url = post.url %}
   {% set current_book_title = post.data.title %}
   {% set current_book_author = post.data.author %}
   {% set current_spoilers = post.data.spoilers %}
+  {% set current_bookshop_id = post.data.bookshop_id %}
 {% endif %}
 
 {% set current_book_cover = '/assets/images/covers/' + current_book + '.jpg' %}
@@ -24,6 +26,9 @@
     <div class="book__image">
       <img src="{{ current_book_cover | url }}" alt="Cover of {{ current_book_title }}">
     </div>
+    {% if current_bookshop_id %}
+      <a class="book__buy" href="https://bookshop.org/a/15644/{{ current_bookshop_id }}">Buy {% if not individualPost %}“{{ current_book_title }}” {% endif %}on Bookshop</a>
+    {% endif %}
   </div>
 
   <section class="highlights-wrap" aria-labelledby="highlightsHeading">

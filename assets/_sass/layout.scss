@@ -11,9 +11,14 @@
 
 .site-footer {
   font-size: .825em;
-  margin: 0 auto 4em;
+  margin: 2em auto 4em;
+  max-width: 36em;
   position: relative;
   z-index: 3;
+
+  p + p {
+    margin-top: 1em;
+  }
 
   a {
     border-bottom: 1px solid;
@@ -49,7 +54,7 @@
   }
 
   .site-footer {
-    text-align: center;
+    margin: 4em auto;
   }
 }
 

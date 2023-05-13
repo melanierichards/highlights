@@ -57,6 +57,17 @@ a.book__image {
   }
 }
 
+a.book__buy {
+  border-bottom: 1px solid;
+  font-family: $font-secondary;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
 @media (hover) {
   a.book__image {
     svg {
