@@ -5,4 +5,5 @@ author: Anne Rice
 kindle: true
 date: 2016-08-17
 tags: posts
+bookshop_id: 9780345337665
 ---
