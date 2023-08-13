@@ -27,13 +27,16 @@ I've chosen to deploy my highlights to the root path of a subdomain, but others 
 ### Book front-page matter
 
 ```
+---
 title: ""
 book: dash-separated
 author:
 kindle: true
 spoilers: false
+content_warnings:
 date: YYYY-MM-DD
 bookshop_id:
+---
 ```
 
 * Where "dash-separated" is also the file name for the `_data` file, JPG, and SVG.
