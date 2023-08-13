@@ -4,6 +4,7 @@
   {% set current_book_title = title %}
   {% set current_book_author = author %}
   {% set current_spoilers = spoilers %}
+  {% set current_content_warnings = content_warnings %}
   {% set current_bookshop_id = bookshop_id %}
 {% else %}
   {% set current_book = post.data.book %}
@@ -11,6 +12,7 @@
   {% set current_book_title = post.data.title %}
   {% set current_book_author = post.data.author %}
   {% set current_spoilers = post.data.spoilers %}
+  {% set current_content_warnings = post.data.content_warnings %}
   {% set current_bookshop_id = post.data.bookshop_id %}
 {% endif %}
 
@@ -35,12 +37,17 @@
     {% if individualPost %}
       <h2 class="u-vis-hidden" id="highlightsHeading">Highlights from this book</h2>
     {% endif %}
-    {% if current_spoilers == true %}
-      <p class="spoilers-note" {% if individualPost %}role="alert"{% endif %}>
-        <svg class="spoilers-note__icon" focusable="false" aria-hidden="true" viewBox="0 0 14 20" width="14" height="20">
+    {% if (current_spoilers == true) or (current_content_warnings) %}
+      <p class="warnings-note" {% if individualPost %}role="alert"{% endif %}>
+        <svg class="warnings-note__icon" focusable="false" aria-hidden="true" viewBox="0 0 14 20" width="14" height="20">
           <use href="#spoilers"></use>
         </svg>
-        Contains spoilers
+        {% if current_spoilers == true %}
+          Contains spoilers{% if current_content_warnings %}. {% endif %}
+        {% endif %}
+        {% if current_content_warnings %}
+          Content warning: {{ current_content_warnings }}
+        {% endif %}
       </p>
     {% endif %}
     <ul class="highlights">
