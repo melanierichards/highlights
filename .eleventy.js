@@ -6,6 +6,7 @@ module.exports = function(eleventyConfig) {
   // Don't try to build pages from these files
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("README.md");
+  eleventyConfig.addPassthroughCopy("robots.txt");
 
   // Keep highlight data files working after conversion from Jekyll
   eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
