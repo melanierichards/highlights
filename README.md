@@ -50,6 +50,17 @@ bookshop_id:
   attribution: 
 ```
 
+Multi-line highlights:
+
+```
+- text: |
+    Line 1
+    Line 2
+    Line 3
+```
+
+Note that the lines of the value are indented at least one space MORE than the key "text". If there's a syntactical error, I probably forgot to indent accordingly.
+
 ### Cover image sizes
 
 | Image          | Width |

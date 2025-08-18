@@ -57,13 +57,19 @@
           <p class="highlight__text">{{ highlight.text }}</p>
           {% if highlight.attribution %}<cite class="highlight__attribution"> — {{ highlight.attribution}}</cite>{% endif %}
           <div class="highlight__meta">
-            <span class="highlight__location">{{ highlight.page }}</span>
+            {% if highlight.page %}
+              <span class="highlight__location">{{ highlight.page }}</span>
+            {% endif %}
             <a href="{{ current_book_url | url }}#{{ highlight_perma }}" class="highlight__link">
               <svg focusable="false" aria-hidden="true" viewBox="0 0 30 20" width="30" height="20">
                 <use href="#link"></use>
               </svg>
               <span>Link</span>
-              <span class="u-vis-hidden">to {{ highlight.page }} highlight</span>
+              {% if highlight.page %}
+                <span class="u-vis-hidden">to {{ highlight.page }} highlight</span>
+              {% else %}
+                <span class="u-vis-hidden">to highlight #{{ loop.index }}</span>
+              {% endif %}
             </a>
           </div>
         </li>

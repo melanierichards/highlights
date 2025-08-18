@@ -119,6 +119,7 @@ a.book__buy {
 }
 
 .highlight__location {
+  margin-right: 1em;
   vertical-align: middle;
 }
 
@@ -127,7 +128,6 @@ a.book__buy {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  margin-left: 1em;
   padding: .5em .5em .5em 36px;
   font: 1em/20px $font-body;
   opacity: .5;
